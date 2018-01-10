@@ -2,6 +2,7 @@ var express = require('express'),
     app = express(),
     server = require('http').createServer(app),
     io = require('socket.io').listen(server),
+    mongoose = require('mongoose'),
     users = {},
     port = process.env.PORT || 3000;
 

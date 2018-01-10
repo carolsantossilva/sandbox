@@ -1,6 +1,6 @@
 {
-  "name": "salesapp-ws",
-  "version": "1.0.0",
+  "name": "express_mongoDB",
+  "version": "1.0.1",
   "description": "sales app server, mackmobile application",
   "main": "index.js",
   "scripts": {
@@ -10,6 +10,7 @@
   "license": "ISC",
   "dependencies": {
     "express": "^4.16.2",
+    "mongoose": "^4.13.9",
     "socket.io": "^2.0.4"
   }
 }
