@@ -27,11 +27,31 @@ io.sockets.on('connection', function(socket){
         io.sockets.emit('usernames', Object.keys(users));
     }
 
-    socket.on('send message', function(data){
-        io.sockets.emit('new message', {
-            msg: data,
-            nick: socket.nickname
-        });
+    socket.on('send message', function(data, callback){
+        var msg = data.trim();
+        if (msg.substr(0,3) === '/w ') {
+            msg = msg.substr(3);
+            var spaceInd = msg.indexOf(' ');
+            if (spaceInd !== -1) {
+                var name = msg.substr(0, spaceInd);
+                msg = msg.substr(spaceInd + 1);
+                if (name in users) {
+                    users[name].emit('whisper', {
+                        msg: msg,
+                        nick: socket.nickname
+                    });
+                } else {
+                    callback('Error! Enter a valid user.');
+                }
+            } else {
+                callback('Error! Please enter a message for your whisper.');
+            }
+        } else {
+            io.sockets.emit('new message', {
+                msg: msg,
+                nick: socket.nickname
+            });
+        }
     });
 
     socket.on('disconnect', function(data){
