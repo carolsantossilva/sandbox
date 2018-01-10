@@ -4,4 +4,4 @@ Codes to study some topic
 
 * NodeJS, socket.io and mongoDB:
 
-Server for an sale iOS application, project from Apple Developer Academy - Mackenzie
+** Server for a chat, studying for a sale iOS application, project @ Apple Developer Academy - Mackenzie
