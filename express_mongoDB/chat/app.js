@@ -8,6 +8,14 @@ var express = require('express'),
 
 server.listen(port);
 
+mongoose.connect('mongodb://localhost/chat', function(err){
+    if (err) {
+        console.log(err);
+    } else {
+        console.log('Connected to mongodb!');
+    }
+});
+
 app.get('/', function(req, res){
     res.sendFile(__dirname + '/index.html');
 });
