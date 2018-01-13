@@ -1,0 +1,24 @@
+{
+  "name": "weather-app",
+  "version": "1.0.0",
+  "description": "Wather app to learn about async function, lession from https://www.udemy.com/the-complete-nodejs-developer-course-2/learn/v4/content",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/anacarolinasantos/sandbox.git"
+  },
+  "keywords": [
+    "nodejs",
+    "node",
+    "weather"
+  ],
+  "author": "Ana Carolina dos Santos Silva",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/anacarolinasantos/sandbox/issues"
+  },
+  "homepage": "https://github.com/anacarolinasantos/sandbox#readme"
+}
