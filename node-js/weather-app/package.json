@@ -20,5 +20,8 @@
   "bugs": {
     "url": "https://github.com/anacarolinasantos/sandbox/issues"
   },
-  "homepage": "https://github.com/anacarolinasantos/sandbox#readme"
+  "homepage": "https://github.com/anacarolinasantos/sandbox#readme",
+  "dependencies": {
+    "request": "^2.83.0"
+  }
 }
