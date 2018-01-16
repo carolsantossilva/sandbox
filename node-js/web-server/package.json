@@ -1,17 +1,15 @@
 {
-  "name": "chat",
-  "version": "1.0.1",
+  "name": "web-server",
+  "version": "1.0.0",
   "description": "",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "anacarolinasantos",
+  "author": "",
   "license": "ISC",
   "dependencies": {
     "express": "^4.16.2",
-    "mongoose": "^4.10.8",
-    "server-destroy": "^1.0.1",
-    "socket.io": "^2.0.4"
+    "hbs": "^4.0.1"
   }
 }

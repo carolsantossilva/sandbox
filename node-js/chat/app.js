@@ -6,21 +6,34 @@ var express = require('express'),
     users = {},
     port = process.env.PORT || 3000;
 
+var connections = {};
+
+var enableDestroy = require('server-destroy');
+
 server.listen(port);
 
-mongoose.connect('mongodb://localhost/chat', function(err){
-    if (err) {
-        console.log(err);
-    } else {
-        console.log('Connected to mongodb!');
-    }
-});
+console.log('Server on port 3000');
+
+// enhance with a 'destroy' function
+enableDestroy(server);
+
+// mongoose.connect('mongodb://localhost/chat', function(err){
+//     if (err) {
+//         console.log(err);
+//     } else {
+//         console.log('Connected to mongodb!');
+//     }
+// });
 
 app.get('/', function(req, res){
     res.sendFile(__dirname + '/index.html');
 });
 
 io.sockets.on('connection', function(socket){
+
+    var key = socket.remoteAddress + ':' + socket.remotePort;
+    connections[key] = socket;
+
     socket.on('new user', function(data, callback){
         if (data in users) {
             callback(false);
@@ -69,3 +82,24 @@ io.sockets.on('connection', function(socket){
         updateNicknames();
     });
 });
+
+function enableDestroy(server) {
+  var connections = {}
+
+  server.on('connection', function(conn) {
+    var key = conn.remoteAddress + ':' + conn.remotePort;
+    connections[key] = conn;
+    conn.on('close', function() {
+      delete connections[key];
+    });
+  });
+
+  server.destroy = function(cb) {
+    server.close(cb);
+    for (var key in connections)
+      connections[key].destroy();
+  };
+}
+
+// some time later...
+// server.destroy();
