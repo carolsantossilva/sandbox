@@ -22,6 +22,6 @@
   },
   "homepage": "https://github.com/anacarolinasantos/sandbox#readme",
   "dependencies": {
-    "request": "^2.83.0"
+    "request": "^2.88.2"
   }
 }
