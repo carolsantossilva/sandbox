@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="1Kw-Mq-5fB" customClass="CustomToolbar" customModule="CustomToolbarTest" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="56"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6R4-8o-cC9">
+                    <rect key="frame" x="40" y="8" width="40" height="40"/>
+                    <state key="normal" title="dn"/>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="f0T-h8-8Wd">
+                    <rect key="frame" x="289" y="8" width="70" height="40"/>
+                    <color key="backgroundColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="70" id="Dzf-SI-f9L"/>
+                        <constraint firstAttribute="height" constant="40" id="ka6-aM-BtH"/>
+                    </constraints>
+                    <state key="normal" title="Done">
+                        <color key="titleColor" red="0.95686274509803915" green="0.47450980392156861" blue="0.12549019607843137" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </state>
+                </button>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="h92-7y-VBd">
+                    <rect key="frame" x="80" y="17.5" width="209" height="21"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hZh-BP-jJc">
+                    <rect key="frame" x="8" y="8" width="40" height="40"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="40" id="htQ-9u-vbe"/>
+                        <constraint firstAttribute="width" secondItem="hZh-BP-jJc" secondAttribute="height" multiplier="1:1" id="xeU-RC-KNF"/>
+                    </constraints>
+                    <state key="normal" title="up"/>
+                </button>
+            </subviews>
+            <color key="backgroundColor" red="0.97647058823529409" green="0.61568627450980395" blue="0.10980392156862745" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="h92-7y-VBd" firstAttribute="centerY" secondItem="1Kw-Mq-5fB" secondAttribute="centerY" id="28d-nm-mq2"/>
+                <constraint firstItem="6R4-8o-cC9" firstAttribute="leading" secondItem="hZh-BP-jJc" secondAttribute="trailing" constant="-8" id="851-Fk-0ay"/>
+                <constraint firstAttribute="trailing" secondItem="f0T-h8-8Wd" secondAttribute="trailing" constant="16" id="If6-TY-AVw"/>
+                <constraint firstItem="f0T-h8-8Wd" firstAttribute="centerY" secondItem="1Kw-Mq-5fB" secondAttribute="centerY" id="akn-hT-R97"/>
+                <constraint firstItem="6R4-8o-cC9" firstAttribute="height" secondItem="hZh-BP-jJc" secondAttribute="height" id="eEo-eK-yyR"/>
+                <constraint firstItem="6R4-8o-cC9" firstAttribute="width" secondItem="hZh-BP-jJc" secondAttribute="width" id="kvP-SS-FeV"/>
+                <constraint firstItem="hZh-BP-jJc" firstAttribute="leading" secondItem="1Kw-Mq-5fB" secondAttribute="leading" constant="8" id="mXq-X7-Xmv"/>
+                <constraint firstItem="h92-7y-VBd" firstAttribute="leading" secondItem="6R4-8o-cC9" secondAttribute="trailing" id="sBX-wH-SJF"/>
+                <constraint firstItem="hZh-BP-jJc" firstAttribute="centerY" secondItem="1Kw-Mq-5fB" secondAttribute="centerY" id="suW-Sr-bCg"/>
+                <constraint firstItem="h92-7y-VBd" firstAttribute="trailing" secondItem="f0T-h8-8Wd" secondAttribute="leading" id="tYs-Qf-BVR"/>
+                <constraint firstItem="6R4-8o-cC9" firstAttribute="centerY" secondItem="hZh-BP-jJc" secondAttribute="centerY" id="z8d-Gi-adX"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="doneButton" destination="f0T-h8-8Wd" id="iGK-OY-6gR"/>
+                <outlet property="nextButton" destination="6R4-8o-cC9" id="9HO-bj-Vn0"/>
+                <outlet property="previousButton" destination="hZh-BP-jJc" id="9mI-qw-JMc"/>
+                <outlet property="toolbarTitleLabel" destination="h92-7y-VBd" id="LTs-NS-HWb"/>
+            </connections>
+            <point key="canvasLocation" x="99.5" y="-201"/>
+        </view>
+    </objects>
+</document>

@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="nOF-z1-d1o">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="FrenteH1-Regular.otf">
+            <string>FrenteH1-Regular</string>
+        </array>
+    </customFonts>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="kAO-bx-ty4">
+            <objects>
+                <viewController id="nOF-z1-d1o" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="sDx-uG-L79">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="background" translatesAutoresizingMaskIntoConstraints="NO" id="0R6-1g-fpQ">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2pw-Xh-pZb">
+                                <rect key="frame" x="75" y="299" width="225" height="70"/>
+                                <color key="backgroundColor" red="0.84313725490196079" green="0.62352941176470589" blue="0.1803921568627451" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" name="FrenteH1-Regular" family="Frente H1" pointSize="48"/>
+                                <state key="normal" title="Place Flags">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <segue destination="20l-Vd-VXv" kind="show" id="7AL-Fb-aRV"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="0R6-1g-fpQ" firstAttribute="leading" secondItem="sDx-uG-L79" secondAttribute="leading" id="9Hb-gG-NBN"/>
+                            <constraint firstItem="2pw-Xh-pZb" firstAttribute="centerY" secondItem="0R6-1g-fpQ" secondAttribute="centerY" id="CTg-0z-1EA"/>
+                            <constraint firstItem="2pw-Xh-pZb" firstAttribute="width" secondItem="0R6-1g-fpQ" secondAttribute="width" multiplier="0.6" id="Ntf-Al-oFO"/>
+                            <constraint firstItem="2pw-Xh-pZb" firstAttribute="centerX" secondItem="0R6-1g-fpQ" secondAttribute="centerX" id="hbB-1f-Rbs"/>
+                            <constraint firstItem="0R6-1g-fpQ" firstAttribute="top" secondItem="sDx-uG-L79" secondAttribute="top" id="iPd-5C-HhU"/>
+                            <constraint firstAttribute="bottom" secondItem="0R6-1g-fpQ" secondAttribute="bottom" id="qCc-Vl-cfd"/>
+                            <constraint firstAttribute="trailing" secondItem="0R6-1g-fpQ" secondAttribute="trailing" id="uhb-xm-C00"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="qNT-Se-fGv"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="qD7-nK-4Z1" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1060" y="27"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="nsj-Bz-yfu">
+            <objects>
+                <viewController id="20l-Vd-VXv" customClass="ViewController" customModule="ARKit_nanoChallenge" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="sMS-aO-Hu6">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <arscnView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="JSX-ev-2yL">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <connections>
+                                    <outlet property="delegate" destination="20l-Vd-VXv" id="S3F-Ij-iX4"/>
+                                </connections>
+                            </arscnView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="👀 Look for a plane to place your flag" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="j94-VC-oTv">
+                                <rect key="frame" x="20" y="40" width="335" height="40"/>
+                                <color key="backgroundColor" red="0.99999600649999998" green="1" blue="1" alpha="0.79724957191780821" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="oMu-pI-xLW"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Placed flags: 0/5" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KdN-EW-up9">
+                                <rect key="frame" x="20" y="607" width="157.5" height="40"/>
+                                <color key="backgroundColor" red="0.99999600649999998" green="1" blue="1" alpha="0.79724957190000001" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="JSX-ev-2yL" firstAttribute="trailing" secondItem="hJL-2G-fdh" secondAttribute="trailing" id="60I-lZ-BjX"/>
+                            <constraint firstItem="j94-VC-oTv" firstAttribute="centerX" secondItem="sMS-aO-Hu6" secondAttribute="centerX" id="AIJ-yA-vKv"/>
+                            <constraint firstItem="j94-VC-oTv" firstAttribute="top" secondItem="sMS-aO-Hu6" secondAttribute="top" constant="40" id="B8g-kX-pom"/>
+                            <constraint firstItem="KdN-EW-up9" firstAttribute="leading" secondItem="j94-VC-oTv" secondAttribute="leading" id="Di9-Ya-Q9n"/>
+                            <constraint firstItem="KdN-EW-up9" firstAttribute="bottom" secondItem="JSX-ev-2yL" secondAttribute="bottom" constant="-20" id="Fpa-ox-wLN"/>
+                            <constraint firstItem="KdN-EW-up9" firstAttribute="height" secondItem="j94-VC-oTv" secondAttribute="height" id="NZE-c3-qqr"/>
+                            <constraint firstItem="j94-VC-oTv" firstAttribute="leading" secondItem="sMS-aO-Hu6" secondAttribute="leading" constant="20" id="Qfo-fB-kZj"/>
+                            <constraint firstItem="JSX-ev-2yL" firstAttribute="top" secondItem="sMS-aO-Hu6" secondAttribute="top" id="XRE-pQ-TTk"/>
+                            <constraint firstItem="KdN-EW-up9" firstAttribute="width" secondItem="j94-VC-oTv" secondAttribute="width" multiplier="0.5" constant="-10" id="Xow-jF-sor"/>
+                            <constraint firstAttribute="trailing" secondItem="j94-VC-oTv" secondAttribute="trailing" constant="20" id="gEF-zS-mDi"/>
+                            <constraint firstItem="JSX-ev-2yL" firstAttribute="bottom" secondItem="hJL-2G-fdh" secondAttribute="bottom" id="p80-TA-3xF"/>
+                            <constraint firstItem="JSX-ev-2yL" firstAttribute="leading" secondItem="hJL-2G-fdh" secondAttribute="leading" id="pu1-gk-U4k"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="hJL-2G-fdh"/>
+                    </view>
+                    <connections>
+                        <outlet property="placedFlagsLabel" destination="KdN-EW-up9" id="6Sd-hH-FeC"/>
+                        <outlet property="sceneView" destination="JSX-ev-2yL" id="GSD-Nw-tIS"/>
+                        <outlet property="statusLabel" destination="j94-VC-oTv" id="utU-H1-b1h"/>
+                        <segue destination="Q3h-9E-XTx" kind="show" identifier="segueIdentifier" id="b1j-6z-23y"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="YhN-NI-yt2" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-218.40000000000001" y="26.53673163418291"/>
+        </scene>
+        <!--Friend-->
+        <scene sceneID="jhh-r9-RvN">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Friend" id="Q3h-9E-XTx" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dAC-R3-aFu" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="462" y="26"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="background" width="504" height="504"/>
+    </resources>
+</document>
