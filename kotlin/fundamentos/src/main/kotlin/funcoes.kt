@@ -14,5 +14,5 @@ fun returnName(): String {
 }
 
 fun dizOi(nome: String = "pessoa", idade: Int) {
-    println("Oi ${nome} - idade ${idade}")
+    println("Oi $nome - idade $idade")
 }
