@@ -9,7 +9,7 @@ Codes to study some topic
 
 * Kotlin:
 
-  * Server for a book marketplace
+  * Server for a book marketplace (https://www.udemy.com/course/kotlin-spring)
     - with Spring
  
 * iOS:
